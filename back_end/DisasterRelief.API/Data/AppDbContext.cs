@@ -1,5 +1,5 @@
 ﻿using DisasterRelief.API.Configurations;
-using DisasterRelief.API.Models;
+using DisasterReliefAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DisasterRelief.API.Data;
@@ -49,9 +49,10 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         base.OnModelCreating(modelBuilder);
 
         // Apply all Fluent API configurations automatically
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+       
     }
 }

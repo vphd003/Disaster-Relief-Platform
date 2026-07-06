@@ -4,12 +4,12 @@ namespace DisasterReliefAPI.Models;
 
 public class RefreshToken
 {
-    [Key]
+   
     public int RefreshTokenId { get; set; }
 
     public int UserId { get; set; }
 
-    [Required]
+
     public string Token { get; set; } = string.Empty;
 
     public DateTime ExpiresAt { get; set; }

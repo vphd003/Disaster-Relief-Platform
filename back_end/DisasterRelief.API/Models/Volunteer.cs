@@ -5,12 +5,12 @@ namespace DisasterReliefAPI.Models;
 
 public class Volunteer
 {
-    [Key]
+
     public int VolunteerId { get; set; }
 
     public int UserId { get; set; }
 
-    [MaxLength(255)]
+
     public string? Experience { get; set; }
 
     public byte AvailabilityStatus { get; set; }

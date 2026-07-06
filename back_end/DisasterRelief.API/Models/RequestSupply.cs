@@ -4,7 +4,7 @@ namespace DisasterReliefAPI.Models;
 
 public class RequestSupply
 {
-    [Key]
+
     public int RequestSupplyId { get; set; }
 
     public int RequestId { get; set; }

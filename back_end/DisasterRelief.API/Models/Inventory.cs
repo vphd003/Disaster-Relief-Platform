@@ -4,7 +4,7 @@ namespace DisasterReliefAPI.Models;
 
 public class Inventory
 {
-    [Key]
+
     public int InventoryId { get; set; }
 
     public int WarehouseId { get; set; }

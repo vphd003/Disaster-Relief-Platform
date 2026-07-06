@@ -4,7 +4,7 @@ namespace DisasterReliefAPI.Models;
 
 public class Assignment
 {
-    [Key]
+   
     public int AssignmentId { get; set; }
 
     public int VolunteerId { get; set; }

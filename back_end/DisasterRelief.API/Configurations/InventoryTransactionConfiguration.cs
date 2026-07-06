@@ -1,4 +1,4 @@
-using DisasterRelief.API.Models;
+using DisasterReliefAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
