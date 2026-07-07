@@ -4,8 +4,14 @@ import HomeView from '../views/HomeView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // Redirect mặc định: mở app là vào login
     {
       path: '/',
+      redirect: '/login'
+    },
+    // Trang chủ (sau khi đăng nhập xong)
+    {
+      path: '/home',
       name: 'home',
       component: HomeView,
     },
