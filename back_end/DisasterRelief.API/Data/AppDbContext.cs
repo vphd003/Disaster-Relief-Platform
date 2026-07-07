@@ -1,58 +1,59 @@
-﻿using DisasterRelief.API.Configurations;
+using DisasterReliefAPI.Configurations;
 using DisasterReliefAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DisasterRelief.API.Data;
-
-public class AppDbContext : DbContext
+namespace DisasterReliefAPI.Data
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options)
+    public class AppDbContext : DbContext
     {
-    }
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        {
+        }
 
-    #region DbSets
+        #region DbSet
 
-    public DbSet<Role> Roles => Set<Role>();
+        public DbSet<Role> Roles => Set<Role>();
 
-    public DbSet<User> Users => Set<User>();
+        public DbSet<User> Users => Set<User>();
 
-    public DbSet<Volunteer> Volunteers => Set<Volunteer>();
+        public DbSet<Volunteer> Volunteers => Set<Volunteer>();
 
-    public DbSet<Requester> Requesters => Set<Requester>();
+        public DbSet<Skill> Skills => Set<Skill>();
 
-    public DbSet<Skill> Skills => Set<Skill>();
+        public DbSet<VolunteerSkill> VolunteerSkills => Set<VolunteerSkill>();
 
-    public DbSet<VolunteerSkill> VolunteerSkills => Set<VolunteerSkill>();
+        public DbSet<Requester> Requesters => Set<Requester>();
 
-    public DbSet<ReliefRequest> ReliefRequests => Set<ReliefRequest>();
+        public DbSet<ReliefRequest> ReliefRequests => Set<ReliefRequest>();
 
-    public DbSet<RequestSupply> RequestSupplies => Set<RequestSupply>();
+        public DbSet<Assignment> Assignments => Set<Assignment>();
 
-    public DbSet<Assignment> Assignments => Set<Assignment>();
+        public DbSet<Notification> Notifications => Set<Notification>();
 
-    public DbSet<Warehouse> Warehouses => Set<Warehouse>();
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
-    public DbSet<Supply> Supplies => Set<Supply>();
+        public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
 
-    public DbSet<Inventory> Inventories => Set<Inventory>();
+        public DbSet<Supply> Supplies => Set<Supply>();
 
-    public DbSet<InventoryTransaction> InventoryTransactions => Set<InventoryTransaction>();
+        public DbSet<RequestSupply> RequestSupplies => Set<RequestSupply>();
 
-    public DbSet<Notification> Notifications => Set<Notification>();
+        public DbSet<Warehouse> Warehouses => Set<Warehouse>();
 
-    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
+        public DbSet<Inventory> Inventories => Set<Inventory>();
 
-    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+        public DbSet<InventoryTransaction> InventoryTransactions => Set<InventoryTransaction>();
 
-    #endregion
+        #endregion
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
-        base.OnModelCreating(modelBuilder);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
-        // Apply all Fluent API configurations automatically
-       
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+            DataSeeder.Seed(modelBuilder);
+        }
     }
 }
