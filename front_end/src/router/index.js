@@ -10,7 +10,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    // Bổ sung block này cho trang đăng ký
+    
     {
       path: '/register',
       name: 'register',

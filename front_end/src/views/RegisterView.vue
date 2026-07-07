@@ -34,8 +34,15 @@
             <label>Mật khẩu</label>
             <div class="input-with-icon">
               <input :type="showPassword ? 'text' : 'password'" v-model="formData.Password" placeholder="••••••••••" required />
-              <button type="button" class="icon-btn" @click="showPassword = !showPassword">
-                👁️
+              <button type="button" class="icon-btn" @click="showPassword = !showPassword" :aria-label="showPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'">
+                <svg v-if="!showPassword" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a20.3 20.3 0 0 1 5.06-6.06M9.9 4.24A10.4 10.4 0 0 1 12 4c7 0 11 8 11 8a20.3 20.3 0 0 1-3.22 4.53M14.12 14.12a3 3 0 1 1-4.24-4.24" />
+                  <line x1="1" y1="1" x2="23" y2="23" />
+                </svg>
               </button>
             </div>
           </div>
@@ -47,7 +54,7 @@
           </div>
         </div>
 
-        <!-- STEP 2 -->
+      
         <div class="step-section">
           <h3 class="step-title">Step 2:</h3>
           
@@ -60,7 +67,7 @@
               <option value="Đà Nẵng">Đà Nẵng</option>
               <option value="Hải Phòng">Hải Phòng</option>
               <option value="Cần Thơ">Cần Thơ</option>
-              <!-- Thêm các tỉnh thành khác nếu cần -->
+              
             </select>
           </div>
 
@@ -85,6 +92,12 @@
         </div>
 
         <button type="submit" class="submit-btn">Đăng ký</button>
+
+        
+        <div class="login-redirect">
+          Đã có tài khoản?
+          <router-link to="/login" class="login-link">Đăng nhập</router-link>
+        </div>
       </form>
     </div>
   </div>
@@ -92,8 +105,9 @@
 
 <script setup>
 import { reactive, ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 
-
+const router = useRouter()
 const showPassword = ref(false)
 
 
@@ -108,7 +122,7 @@ const formData = reactive({
   IsCommitted: false
 })
 
-// Kiểm tra mật khẩu xác nhận
+
 const passwordMismatch = computed(() => {
   return formData.ConfirmPassword !== '' && formData.Password !== formData.ConfirmPassword
 })
@@ -119,15 +133,14 @@ const handleRegister = async () => {
     return
   }
 
-  // Tạo payload để gửi lên backend theo đúng cấu trúc thuộc tính được yêu cầu
+
   const payload = {
     FullName: formData.FullName,
     Email: formData.Email,
     Phone: formData.Phone,
     Address: formData.Address,
     Password: formData.Password,
-    // Nếu backend cần nhận skill, có thể đẩy thêm vào đây
-    // Skill: formData.Skill 
+   
   }
 
   console.log("Dữ liệu gửi lên API:", payload)
@@ -135,7 +148,9 @@ const handleRegister = async () => {
   
   try {
     
+    
     alert("Đăng ký thành công!")
+    router.push('/login') 
   } catch (error) {
     
     console.error("Lỗi đăng ký:", error)
@@ -163,9 +178,9 @@ const handleRegister = async () => {
   align-items: center;
 }
 
-/* Class cho ảnh logo sau này */
+
 .logo-img {
-  height: 50px; /* Điều chỉnh kích thước ảnh logo sau này cho phù hợp */
+  height: 50px; 
   margin-bottom: 5px;
 }
 
@@ -270,8 +285,15 @@ const handleRegister = async () => {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 16px;
   color: #a0aec0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  line-height: 0;
+}
+.icon-btn:hover {
+  color: #4a5568;
 }
 
 
@@ -317,5 +339,21 @@ const handleRegister = async () => {
   color: #e53e3e;
   font-size: 12px;
   margin-top: 5px;
+}
+
+.login-redirect {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #4a5568;
+}
+.login-link {
+  color: #1a4f8d;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+.login-link:hover {
+  text-decoration: underline;
 }
 </style>
