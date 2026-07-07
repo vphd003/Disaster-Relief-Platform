@@ -23,5 +23,6 @@ namespace DisasterReliefAPI.Repositories.Interfaces
         Task<T?> GetByIdAsync(params object[] keyValues);
 
         Task<bool> ExistsAsync(params object[] keyValues);
+        Task SaveChangesAsync();
     }
 }

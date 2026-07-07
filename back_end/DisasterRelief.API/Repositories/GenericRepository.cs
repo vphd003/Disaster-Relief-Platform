@@ -68,10 +68,15 @@ namespace DisasterReliefAPI.Repositories
         {
             return await _context.SaveChangesAsync();
         }
-
+        //func này chưa có logic
         public Task<T?> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
+        }
+        //func này chưa có logic
+        Task IGenericRepository<T>.SaveChangesAsync()
+        {
+            return SaveChangesAsync();
         }
     }
 }

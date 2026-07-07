@@ -53,7 +53,6 @@ namespace DisasterReliefAPI.Data
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
-            (modelBuilder);
         }
     }
 }

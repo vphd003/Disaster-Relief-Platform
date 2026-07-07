@@ -1,5 +1,5 @@
-using DisasterRelief.API.Data;
 using DisasterRelief.API.Data.DataSeed;
+using DisasterReliefAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
