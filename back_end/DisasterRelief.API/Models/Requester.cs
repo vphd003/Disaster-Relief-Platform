@@ -4,7 +4,7 @@ namespace DisasterReliefAPI.Models;
 
 public class Requester
 {
-    [Key]
+  
     public int RequesterId { get; set; }
 
     public int UserId { get; set; }

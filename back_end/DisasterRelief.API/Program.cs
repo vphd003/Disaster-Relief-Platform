@@ -1,17 +1,42 @@
+using DisasterRelief.API.Data.DataSeed;
+using DisasterReliefAPI.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// =====================
+// Seed Database
+// =====================
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetService<AppDbContext>();
+
+    if (context != null)
+    {
+        await DbSeeder.SeedAsync(context);
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
