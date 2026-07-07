@@ -15,7 +15,7 @@ public static class SupplySeeder
         {
             new()
             {
-                SupplyId = 1,
+               
                 SupplyName = "Rice",
                 Unit = "kg",
                 Category = "Food"
@@ -23,7 +23,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 2,
+               
                 SupplyName = "Instant Noodles",
                 Unit = "box",
                 Category = "Food"
@@ -31,7 +31,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 3,
+               
                 SupplyName = "Drinking Water",
                 Unit = "bottle",
                 Category = "Water"
@@ -39,7 +39,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 4,
+               
                 SupplyName = "Blanket",
                 Unit = "piece",
                 Category = "Shelter"
@@ -47,7 +47,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 5,
+               
                 SupplyName = "Tent",
                 Unit = "set",
                 Category = "Shelter"
@@ -55,7 +55,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 6,
+               
                 SupplyName = "First Aid Kit",
                 Unit = "kit",
                 Category = "Medical"
@@ -63,7 +63,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 7,
+              
                 SupplyName = "Medical Mask",
                 Unit = "box",
                 Category = "Medical"
@@ -71,7 +71,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 8,
+                
                 SupplyName = "Milk",
                 Unit = "box",
                 Category = "Food"
@@ -79,7 +79,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 9,
+               
                 SupplyName = "Baby Food",
                 Unit = "box",
                 Category = "Food"
@@ -87,7 +87,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 10,
+                
                 SupplyName = "Flashlight",
                 Unit = "piece",
                 Category = "Equipment"
@@ -95,7 +95,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 11,
+               
                 SupplyName = "Battery",
                 Unit = "pack",
                 Category = "Equipment"
@@ -103,7 +103,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 12,
+                
                 SupplyName = "Raincoat",
                 Unit = "piece",
                 Category = "Equipment"
@@ -111,7 +111,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 13,
+               
                 SupplyName = "Life Jacket",
                 Unit = "piece",
                 Category = "Safety"
@@ -119,7 +119,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 14,
+               
                 SupplyName = "Rope",
                 Unit = "meter",
                 Category = "Safety"
@@ -127,7 +127,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 15,
+               
                 SupplyName = "Hygiene Kit",
                 Unit = "kit",
                 Category = "Hygiene"
@@ -135,7 +135,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 16,
+               
                 SupplyName = "Soap",
                 Unit = "bar",
                 Category = "Hygiene"
@@ -143,7 +143,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 17,
+               
                 SupplyName = "Toothbrush",
                 Unit = "piece",
                 Category = "Hygiene"
@@ -151,7 +151,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 18,
+              
                 SupplyName = "Towel",
                 Unit = "piece",
                 Category = "Hygiene"
@@ -159,7 +159,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 19,
+               
                 SupplyName = "Cooking Oil",
                 Unit = "bottle",
                 Category = "Food"
@@ -167,7 +167,7 @@ public static class SupplySeeder
 
             new()
             {
-                SupplyId = 20,
+               
                 SupplyName = "Canned Food",
                 Unit = "can",
                 Category = "Food"

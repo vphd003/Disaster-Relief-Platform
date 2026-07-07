@@ -12,6 +12,10 @@ namespace DisasterRelief.API.Configurations
 
             builder.HasKey(r => r.RoleId);
 
+            // RoleId không tự tăng
+            builder.Property(r => r.RoleId)
+                .ValueGeneratedNever();
+
             builder.Property(r => r.RoleName)
                 .HasMaxLength(50)
                 .IsRequired();

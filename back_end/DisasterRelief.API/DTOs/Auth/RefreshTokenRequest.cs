@@ -1,6 +1,6 @@
-﻿namespace DisasterRelief.API.DTOs.Auth
+﻿namespace DisasterRelief.API.DTOs.Auth;
+
+public class RefreshTokenRequest
 {
-    public class RefreshTokenRequest
-    {
-    }
+    public string RefreshToken { get; set; } = string.Empty;
 }

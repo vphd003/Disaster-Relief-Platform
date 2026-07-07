@@ -15,7 +15,7 @@ public static class RequestSupplySeeder
         {
             new()
             {
-                RequestSupplyId = 1,
+               
                 RequestId = 1,
                 SupplyId = 1,
                 QuantityRequested = 500,
@@ -24,7 +24,7 @@ public static class RequestSupplySeeder
 
             new()
             {
-                RequestSupplyId = 2,
+                
                 RequestId = 1,
                 SupplyId = 2,
                 QuantityRequested = 300,
@@ -33,7 +33,7 @@ public static class RequestSupplySeeder
 
             new()
             {
-                RequestSupplyId = 3,
+               
                 RequestId = 2,
                 SupplyId = 3,
                 QuantityRequested = 100,
@@ -42,7 +42,7 @@ public static class RequestSupplySeeder
 
             new()
             {
-                RequestSupplyId = 4,
+               
                 RequestId = 3,
                 SupplyId = 4,
                 QuantityRequested = 250,
@@ -51,7 +51,7 @@ public static class RequestSupplySeeder
 
             new()
             {
-                RequestSupplyId = 5,
+               
                 RequestId = 4,
                 SupplyId = 5,
                 QuantityRequested = 150,
@@ -60,7 +60,7 @@ public static class RequestSupplySeeder
 
             new()
             {
-                RequestSupplyId = 6,
+               
                 RequestId = 5,
                 SupplyId = 2,
                 QuantityRequested = 600,

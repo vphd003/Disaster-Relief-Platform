@@ -15,52 +15,52 @@ public static class RequesterSeeder
         {
             new()
             {
-                RequesterId = 1,
+                
                 UserId = 12
             },
             new()
             {
-                RequesterId = 2,
+                
                 UserId = 13
             },
             new()
             {
-                RequesterId = 3,
+               
                 UserId = 14
             },
             new()
             {
-                RequesterId = 4,
+               
                 UserId = 15
             },
             new()
             {
-                RequesterId = 5,
+                
                 UserId = 16
             },
             new()
             {
-                RequesterId = 6,
+               
                 UserId = 17
             },
             new()
             {
-                RequesterId = 7,
+               
                 UserId = 18
             },
             new()
             {
-                RequesterId = 8,
+                
                 UserId = 19
             },
             new()
             {
-                RequesterId = 9,
+               
                 UserId = 20
             },
             new()
             {
-                RequesterId = 10,
+                
                 UserId = 21
             }
         };

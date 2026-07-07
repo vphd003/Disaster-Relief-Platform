@@ -8,36 +8,39 @@ public static class RoleSeeder
 {
     public static async Task SeedAsync(AppDbContext context)
     {
-        if (await context.Roles.AnyAsync())
+        
+        var existingRoles = await context.Roles
+            .AsNoTracking()
+            .ToListAsync();
+
+        if (existingRoles.Any())
             return;
 
+
         var roles = new List<Role>
-        {
-            new()
-            {
-                RoleId = 1,
-                RoleName = "Admin",
-                Description = "System Administrator"
-            },
-            new()
-            {
-                RoleId = 2,
-                RoleName = "Coordinator",
-                Description = "Manage requests and volunteers"
-            },
-            new()
-            {
-                RoleId = 3,
-                RoleName = "Volunteer",
-                Description = "Participate in relief activities"
-            },
-            new()
-            {
-                RoleId = 4,
-                RoleName = "Requester",
-                Description = "Create relief requests"
-            }
-        };
+    {
+        new()
+        {   RoleId=1,
+            RoleName = "Admin",
+            Description = "System Administrator"
+        },
+        new()
+        {   RoleId=2,
+            RoleName = "Coordinator",
+            Description = "Manage requests and volunteers"
+        },
+        new()
+        {   RoleId=3,
+            RoleName = "Volunteer",
+            Description = "Participate in relief activities"
+        },
+        new()
+        {   RoleId=4,
+            RoleName = "Requester",
+            Description = "Create relief requests"
+        }
+    };
+
 
         await context.Roles.AddRangeAsync(roles);
         await context.SaveChangesAsync();

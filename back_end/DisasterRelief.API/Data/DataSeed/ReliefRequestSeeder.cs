@@ -16,7 +16,7 @@ public static class ReliefRequestSeeder
         {
             new()
             {
-                RequestId = 1,
+               
                 RequesterId = 1,
                 Title = "Flood Relief Support",
                 Description = "Need drinking water and food supplies.",
@@ -30,7 +30,7 @@ public static class ReliefRequestSeeder
 
             new()
             {
-                RequestId = 2,
+                
                 RequesterId = 2,
                 Title = "Medical Assistance",
                 Description = "Need emergency medicine and first aid kits.",
@@ -44,7 +44,7 @@ public static class ReliefRequestSeeder
 
             new()
             {
-                RequestId = 3,
+                
                 RequesterId = 3,
                 Title = "Food Distribution",
                 Description = "Need rice and instant noodles.",
@@ -58,7 +58,7 @@ public static class ReliefRequestSeeder
 
             new()
             {
-                RequestId = 4,
+                
                 RequesterId = 4,
                 Title = "Temporary Shelter",
                 Description = "Need tents and blankets.",
@@ -72,7 +72,7 @@ public static class ReliefRequestSeeder
 
             new()
             {
-                RequestId = 5,
+               
                 RequesterId = 5,
                 Title = "Clean Water",
                 Description = "Need bottled water urgently.",

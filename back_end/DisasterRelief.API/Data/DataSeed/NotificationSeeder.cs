@@ -19,7 +19,7 @@ public static class NotificationSeeder
         {
             notifications.Add(new Notification
             {
-                NotificationId = id++,
+                
                 UserId = user.UserId,
                 Title = "Welcome",
                 Content = $"Welcome {user.FullName} to Disaster Relief System.",
@@ -67,7 +67,19 @@ public static class NotificationSeeder
                 });
             }
         }
+        var duplicateIds = notifications
+    .GroupBy(x => x.NotificationId)
+    .Where(x => x.Count() > 1)
+    .Select(x => x.Key)
+    .ToList();
 
+
+        if (duplicateIds.Any())
+        {
+            throw new Exception(
+                $"Duplicate NotificationId: {string.Join(",", duplicateIds)}"
+            );
+        }
         await context.Notifications.AddRangeAsync(notifications);
         await context.SaveChangesAsync();
     }

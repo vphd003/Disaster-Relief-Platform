@@ -1,3 +1,4 @@
+using DisasterRelief.API.Helpers;
 using DisasterReliefAPI.Data;
 using DisasterReliefAPI.Models;
 using Microsoft.AspNetCore.Identity;
@@ -22,7 +23,7 @@ public static class UserSeeder
 
         var admin = new User
         {
-            UserId = 1,
+            
             RoleId = 1,
             FullName = "System Administrator",
             Email = "admin@relief.com",
@@ -32,7 +33,8 @@ public static class UserSeeder
             CreatedAt = DateTime.UtcNow
         };
 
-        admin.PasswordHash = hasher.HashPassword(admin, "Admin@123");
+        admin.PasswordHash =
+    PasswordHelper.HashPassword("Admin@123");
 
         users.Add(admin);
 
@@ -44,7 +46,7 @@ public static class UserSeeder
         {
             var coordinator = new User
             {
-                UserId = i,
+                
                 RoleId = 2,
                 FullName = $"Coordinator {i - 1}",
                 Email = $"coordinator{i - 1}@relief.com",
@@ -68,7 +70,7 @@ public static class UserSeeder
         {
             var volunteer = new User
             {
-                UserId = i,
+                
                 RoleId = 3,
                 FullName = $"Volunteer {i - 3}",
                 Email = $"volunteer{i - 3}@relief.com",
@@ -92,7 +94,7 @@ public static class UserSeeder
         {
             var requester = new User
             {
-                UserId = i,
+                
                 RoleId = 4,
                 FullName = $"Requester {i - 11}",
                 Email = $"requester{i - 11}@relief.com",

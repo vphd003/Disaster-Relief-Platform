@@ -22,7 +22,7 @@ public static class InventoryTransactionSeeder
             // ===== IMPORT =====
             transactions.Add(new InventoryTransaction
             {
-                TransactionId = transactionId++,
+
                 InventoryId = inventory.InventoryId,
                 Type = 1, // Import
                 Quantity = random.Next(100, 500),
@@ -33,7 +33,7 @@ public static class InventoryTransactionSeeder
             // ===== EXPORT =====
             transactions.Add(new InventoryTransaction
             {
-                TransactionId = transactionId++,
+                
                 InventoryId = inventory.InventoryId,
                 Type = 2, // Export
                 Quantity = random.Next(10, 80),

@@ -7,5 +7,6 @@ namespace DisasterReliefAPI.Repositories.Interfaces
         Task<User?> GetByEmailAsync(string email);
 
         Task<IEnumerable<User>> GetByRoleAsync(int roleId);
+        Task<bool> EmailExistsAsync(string email);
     }
 }

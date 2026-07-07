@@ -1,6 +1,9 @@
-using DisasterRelief.API.Data;
+
 using DisasterRelief.API.DataSeed;
+using DisasterRelief.API.Helpers;
 using DisasterReliefAPI.Data;
+using DisasterReliefAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DisasterRelief.API.Data.DataSeed;
 
@@ -16,11 +19,12 @@ public static class DbSeeder
         await SkillSeeder.SeedAsync(context);
         await VolunteerSkillSeeder.SeedAsync(context);
 
+        await SupplySeeder.SeedAsync(context);
+
         await ReliefRequestSeeder.SeedAsync(context);
         await RequestSupplySeeder.SeedAsync(context);
 
         await WarehouseSeeder.SeedAsync(context);
-        await SupplySeeder.SeedAsync(context);
         await InventorySeeder.SeedAsync(context);
         await InventoryTransactionSeeder.SeedAsync(context);
 

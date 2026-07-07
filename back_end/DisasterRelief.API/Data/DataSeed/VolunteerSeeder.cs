@@ -15,7 +15,7 @@ public static class VolunteerSeeder
         {
             new()
             {
-                VolunteerId = 1,
+                
                 UserId = 4,
                 Experience = "3 years in flood relief and emergency logistics.",
                 AvailabilityStatus = 1,
@@ -26,7 +26,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 2,
+                
                 UserId = 5,
                 Experience = "First aid volunteer.",
                 AvailabilityStatus = 1,
@@ -37,7 +37,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 3,
+                
                 UserId = 6,
                 Experience = "Food distribution experience.",
                 AvailabilityStatus = 1,
@@ -48,7 +48,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 4,
+                
                 UserId = 7,
                 Experience = "Medical support volunteer.",
                 AvailabilityStatus = 1,
@@ -59,7 +59,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 5,
+                
                 UserId = 8,
                 Experience = "Rescue support in mountainous areas.",
                 AvailabilityStatus = 0,
@@ -70,7 +70,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 6,
+                
                 UserId = 9,
                 Experience = "Transportation and logistics.",
                 AvailabilityStatus = 1,
@@ -81,7 +81,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 7,
+                
                 UserId = 10,
                 Experience = "Community emergency response.",
                 AvailabilityStatus = 1,
@@ -92,7 +92,7 @@ public static class VolunteerSeeder
             },
             new()
             {
-                VolunteerId = 8,
+                
                 UserId = 11,
                 Experience = "New volunteer.",
                 AvailabilityStatus = 1,

@@ -11,7 +11,7 @@ public class Assignment
 
     public int RequestId { get; set; }
 
-    public int UserId { get; set; }
+    
 
     public DateTime AssignedAt { get; set; }
 
@@ -21,5 +21,5 @@ public class Assignment
 
     public virtual ReliefRequest ReliefRequest { get; set; } = null!;
 
-    public virtual User User { get; set; } = null!;
+    
 }

@@ -15,8 +15,7 @@ namespace DisasterRelief.API.Migrations
                 name: "Roles",
                 columns: table => new
                 {
-                    RoleId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
                     RoleName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
@@ -323,9 +322,9 @@ namespace DisasterRelief.API.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     VolunteerId = table.Column<int>(type: "int", nullable: false),
                     RequestId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    AssignedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
-                    Status = table.Column<byte>(type: "tinyint", nullable: false, defaultValue: (byte)0)
+                    AssignedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<byte>(type: "tinyint", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -340,8 +339,7 @@ namespace DisasterRelief.API.Migrations
                         name: "FK_Assignments_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_Assignments_Volunteers_VolunteerId",
                         column: x => x.VolunteerId,

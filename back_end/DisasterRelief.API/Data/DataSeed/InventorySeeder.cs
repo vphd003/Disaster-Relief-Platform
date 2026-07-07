@@ -24,7 +24,7 @@ public static class InventorySeeder
             {
                 inventories.Add(new Inventory
                 {
-                    InventoryId = inventoryId++,
+                    
                     WarehouseId = warehouseId,
                     SupplyId = supplyId,
                     Quantity = random.Next(100, 1000),

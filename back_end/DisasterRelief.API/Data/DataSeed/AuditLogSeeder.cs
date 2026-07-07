@@ -19,7 +19,7 @@ public static class AuditLogSeeder
         // ===== Admin =====
         auditLogs.Add(new AuditLog
         {
-            AuditId = auditId++,
+            
             UserId = 1,
             Action = "Create",
             Entity = "Role",
@@ -29,7 +29,7 @@ public static class AuditLogSeeder
 
         auditLogs.Add(new AuditLog
         {
-            AuditId = auditId++,
+           
             UserId = 1,
             Action = "Create",
             Entity = "User",
@@ -42,7 +42,7 @@ public static class AuditLogSeeder
         {
             auditLogs.Add(new AuditLog
             {
-                AuditId = auditId++,
+                
                 UserId = 2,
                 Action = "Assign Volunteer",
                 Entity = "Assignment",
@@ -55,7 +55,7 @@ public static class AuditLogSeeder
         {
             auditLogs.Add(new AuditLog
             {
-                AuditId = auditId++,
+               
                 UserId = 3,
                 Action = "Approve Request",
                 Entity = "ReliefRequest",
@@ -69,7 +69,7 @@ public static class AuditLogSeeder
         {
             auditLogs.Add(new AuditLog
             {
-                AuditId = auditId++,
+                
                 UserId = volunteerId,
                 Action = "Update Profile",
                 Entity = "Volunteer",
@@ -83,7 +83,7 @@ public static class AuditLogSeeder
         {
             auditLogs.Add(new AuditLog
             {
-                AuditId = auditId++,
+                
                 UserId = i,
                 Action = "Create Request",
                 Entity = "ReliefRequest",

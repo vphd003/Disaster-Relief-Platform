@@ -19,7 +19,7 @@ public static class RefreshTokenSeeder
         {
             refreshTokens.Add(new RefreshToken
             {
-                RefreshTokenId = tokenId++,
+               
                 UserId = user.UserId,
                 Token = Guid.NewGuid().ToString("N"),
                 CreatedAt = DateTime.UtcNow.AddDays(-1),

@@ -15,7 +15,7 @@ public static class WarehouseSeeder
         {
             new()
             {
-                WarehouseId = 1,
+               
                 WarehouseName = "Ha Noi Central Warehouse",
                 Location = "Cau Giay, Ha Noi",
                 Capacity = 5000,
@@ -24,7 +24,7 @@ public static class WarehouseSeeder
 
             new()
             {
-                WarehouseId = 2,
+                
                 WarehouseName = "Da Nang Relief Warehouse",
                 Location = "Hai Chau, Da Nang",
                 Capacity = 3500,
@@ -33,7 +33,7 @@ public static class WarehouseSeeder
 
             new()
             {
-                WarehouseId = 3,
+                
                 WarehouseName = "Ho Chi Minh Warehouse",
                 Location = "Thu Duc, Ho Chi Minh City",
                 Capacity = 7000,
@@ -42,7 +42,7 @@ public static class WarehouseSeeder
 
             new()
             {
-                WarehouseId = 4,
+                
                 WarehouseName = "Can Tho Regional Warehouse",
                 Location = "Ninh Kieu, Can Tho",
                 Capacity = 2500,
@@ -51,7 +51,7 @@ public static class WarehouseSeeder
 
             new()
             {
-                WarehouseId = 5,
+                
                 WarehouseName = "Hue Emergency Warehouse",
                 Location = "Hue City",
                 Capacity = 3000,

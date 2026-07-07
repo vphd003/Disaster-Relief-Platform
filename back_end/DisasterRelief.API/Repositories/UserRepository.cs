@@ -26,5 +26,9 @@ namespace DisasterReliefAPI.Repositories
                 .Where(x => x.RoleId == roleId)
                 .ToListAsync();
         }
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            return await _context.Users.AnyAsync(u => u.Email == email);
+        }
     }
 }
