@@ -1,4 +1,4 @@
-using DisasterRelief.API.Data;
+using DisasterReliefAPI.Data;
 using DisasterReliefAPI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

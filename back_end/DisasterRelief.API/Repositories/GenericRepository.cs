@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 
 namespace DisasterReliefAPI.Repositories
 {
+
     public class GenericRepository<T> : IGenericRepository<T>
         where T : class
     {
@@ -66,6 +67,11 @@ namespace DisasterReliefAPI.Repositories
         public virtual async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();
+        }
+
+        public Task<T?> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

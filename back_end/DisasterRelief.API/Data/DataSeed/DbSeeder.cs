@@ -1,4 +1,6 @@
 using DisasterRelief.API.Data;
+using DisasterRelief.API.DataSeed;
+using DisasterReliefAPI.Data;
 
 namespace DisasterRelief.API.Data.DataSeed;
 

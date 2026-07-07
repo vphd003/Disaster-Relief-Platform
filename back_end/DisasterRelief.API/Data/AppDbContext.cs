@@ -1,4 +1,4 @@
-using DisasterReliefAPI.Configurations;
+using DisasterRelief.API.Configurations;
 using DisasterReliefAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -53,7 +53,7 @@ namespace DisasterReliefAPI.Data
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
-            DataSeeder.Seed(modelBuilder);
+            (modelBuilder);
         }
     }
 }
